@@ -46,7 +46,7 @@ public class ClientViewModel extends Consult {
     private Pager<client> pagerClients;
     private Pager<client> pagerReports;
     private Codigos codigos;
-    private SimpleDateFormat formateador;    
+    private SimpleDateFormat formateador;
     private DateChooserCombo _dateChooser, _dateChooser1, _dateChooser2;
     private JCheckBox _checkBoxDia;
     private static TUsuarios dataUsuario;
@@ -58,7 +58,7 @@ public class ClientViewModel extends Consult {
 
     public ClientViewModel(TUsuarios dataUsuario) {
         this.dataUsuario = dataUsuario;
-        formateador = new SimpleDateFormat();        
+        formateador = new SimpleDateFormat();
         configuratioViewModel = new ConfiguratioViewModel();
 
     }
@@ -416,6 +416,7 @@ public class ClientViewModel extends Consult {
     private Double interesesCliente = 0.0;
     private String ticketCuota, nameCliente, ticketIntereses;
     private List<TInteresesClientes> listIntereses;
+    private int cuotas;
 
     public void searchReport(String valor) {
         List<client> clientFilter;
@@ -541,6 +542,7 @@ public class ClientViewModel extends Consult {
                                 labelVM.get(21).setText("Cambio para el Cliente " + mony + format.decimal(cambio));
                                 labelVM.get(11).setText(mony + "0.00");
                                 deudaActual = 0.0;
+                                deudaActualCliente = 0.0;
                             } else {
                                 cambio = pago - mensual;
                                 labelVM.get(21).setText("Cambio para el Cliente " + mony + format.decimal(cambio));
@@ -584,7 +586,7 @@ public class ClientViewModel extends Consult {
                                 for (int i = 0; i < cantCuotas; i++) {
                                     interesesPagos += listIntereses.get(i).getIntereses();
                                 }
-                                int cuotas = interesCuotas - cantCuotas;
+                                cuotas = interesCuotas - cantCuotas;
                                 double _intereses = intereses - interesesPagos;
                                 labelVM.get(16).setText(mony + format.decimal(_intereses));
                                 labelVM.get(17).setText(String.valueOf(cuotas));
@@ -622,7 +624,7 @@ public class ClientViewModel extends Consult {
                             try {
                                 getConn().setAutoCommit(false);
                                 String dateNow = new Calendario().addMes(1);
-                                String fechaLimite = Objects.equals(deudaActual, 0) ? "--/--/--" : dateNow;
+                                String fechaLimite = Objects.equals(deudaActual, 0) ? new Calendario().getFecha() : dateNow;
                                 String ticket = codigos.codesTickets(ticketCuota);
                                 String query1 = "INSERT INTO TPagosClient(deuda,saldo,pago,cambio,fecha,fechaLimite,ticket,idUsuario,usuario,idClient,fechaDeuda,mensual) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
                                 var dataReport = ReporteCliente().stream().filter(u -> u.getIdclientReport() == idclientReport)
@@ -634,7 +636,7 @@ public class ClientViewModel extends Consult {
                                 };
 
                                 queryRunner.insert(getConn(), query1, new ColumnListHandler(), dataInsertTPagoClient);
-                                if (deudaActual.equals(pago)) {
+                                if (deudaActualCliente.equals(0.0)) {
                                     String query2 = "UPDATE clientReport SET deuda = ?,mensual = ?,"
                                             + "fechaDeuda = ?, deudaActual = ?, ultimoPago = ?,"
                                             + "cambio = ?, fechaPago = ?,ticket = ?,fechaLimite = ?"
@@ -720,7 +722,7 @@ public class ClientViewModel extends Consult {
                                                     + "pago = ?,cambio = ?,cuotas = ?,interesFecha = ?,"
                                                     + "ticketInteres = ? WHERE idTReportesInteresCliente= " + idReportInteres + " AND "
                                                     + "idClient= " + idclientReport;
-                                            if (intereses.equals(interesPago)) {
+                                            if (cuotas == 0) {
                                                 Object[] data3 = {
                                                     0.0,
                                                     0.0,
@@ -789,29 +791,37 @@ public class ClientViewModel extends Consult {
         try {
             _dateChooser1.setFormat(3);
             _dateChooser2.setFormat(3);
+            var cal = new Calendario();
             String[] titulos = {
                 "Id", "Deuda", "Saldo", "Pago",
                 "Cambio", "Fecha", "Ticket"
             };
             model4 = new DefaultTableModel(null, titulos);
-            var date1 = formateador.parse(_dateChooser1.getSelectedPeriodSet().toString());            
+            var date1 = formateador.parse(_dateChooser1.getSelectedPeriodSet().toString());
             var date2 = formateador.parse(_dateChooser2.getSelectedPeriodSet().toString());
             if (filtrar) {
                 if (date2.after(date1) || date1.equals(date2)) {
                     List<TPagosClient> listPagos1 = new ArrayList<TPagosClient>();
                     var pagos = PagosClientes().stream().filter(u -> u.getIdClient() == idclientReport)
                             .collect(Collectors.toList());
+                    formateador = new SimpleDateFormat("yyyy/MM/dd");
+                    _dateChooser1.setFormat(3);
+                    var date3 = _dateChooser1.getCurrent();
+                    var date4 = formateador.parse(cal.getFecha(date3));
                     for (TPagosClient pago : pagos) {
-                        var date3 = formateador.parse(_dateChooser1.getSelectedPeriodSet().toString());
-                        var date4 = pago.getFecha();
-                        if (date3.equals(date4) || date4.after(date3)) {
+                        var data = pago.getFecha().toString().replace('-', '/');
+                        var date5 = formateador.parse(data);
+                        if (date4.equals(date5) || date4.before(date5)) {
                             listPagos1.add(pago);
                         }
                     }
+                    _dateChooser2.setFormat(3);
+                    var date6 = _dateChooser2.getCurrent();
+                    var date7 = formateador.parse(cal.getFecha(date6));
                     for (TPagosClient pago : listPagos1) {
-                        var date3 = formateador.parse(_dateChooser2.getSelectedPeriodSet().toString());
-                        var date4 = pago.getFecha();
-                        if (date3.equals(date4) || date3.after(date4)) {
+                        var data = pago.getFecha().toString().replace('-', '/');
+                        var date8 = formateador.parse(data);
+                        if (date7.equals(date8) || date7.after(date8)) {
                             Object[] registros = {
                                 pago.getIdClient(),
                                 pago.getDeuda(),
@@ -849,6 +859,13 @@ public class ClientViewModel extends Consult {
             var data = ex.getMessage();
         }
         _tablePagosCuotas.setModel(model4);
+        _tablePagosCuotas.getColumnModel().getColumn(0).setMaxWidth(0);
+        _tablePagosCuotas.getColumnModel().getColumn(0).setMinWidth(0);
+        _tablePagosCuotas.getColumnModel().getColumn(0).setPreferredWidth(0);
+    }
+    
+    public void TicketDeuda(){
+        
     }
 
     public final void restablecerReporte() {

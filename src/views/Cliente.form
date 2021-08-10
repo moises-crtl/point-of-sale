@@ -824,12 +824,11 @@
                                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="0" pref="174" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jPanel10" max="32767" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="rbClientCuotas" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
@@ -837,6 +836,7 @@
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                           </Group>
                                           <Component id="jPanel11" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jPanel10" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -932,35 +932,36 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                          <Component id="lbClientFechaDeuda" min="-2" pref="104" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="lbReportName4" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                                  <Component id="lbClientDeudaCuenta" min="-2" pref="93" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="lbClientDeudaCuenta" min="-2" pref="93" max="-2" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                                                   <Component id="lbReportName1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
+                                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="lbReportName4" max="32767" attributes="0"/>
+                                                  <EmptySpace min="22" pref="22" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="lbClientFechaDeuda" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="lbReportName2" min="-2" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
-                                                      <Component id="lbClientUltimoPagoCuenta" max="32767" attributes="0"/>
-                                                  </Group>
-                                                  <Component id="lbReportName3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="lbReportName3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbClientUltimoPagoCuenta" max="32767" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="57" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Component id="lbClientPago1" min="-2" pref="102" max="-2" attributes="0"/>
@@ -972,10 +973,18 @@
                                               </Group>
                                           </Group>
                                       </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-                                          <Component id="lbClientCuotasPorMes" min="-2" pref="95" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="lbReportName2" max="32767" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                                  <Component id="lbClientCuotasPorMes" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="222" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -997,16 +1006,20 @@
                                       <Component id="lbClientNumeroTicket" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lbReportName4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbReportName2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="lbReportName2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbClientCuotasPorMes" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          <Component id="lbReportName4" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="lbClientFechaDeuda" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="lbClientFechaDeuda" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lbClientCuotasPorMes" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1062,7 +1075,7 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="lbReportName4">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Fecha Deuda"/>
+                            <Property name="text" type="java.lang.String" value="Fecha Pago"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="lbClientFechaDeuda">
@@ -1113,14 +1126,14 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="lbReportName6" min="-2" max="-2" attributes="0"/>
-                                              <Component id="lbClientIntereses" min="-2" pref="93" max="-2" attributes="0"/>
+                                              <Component id="lbClientIntereses" min="-2" pref="158" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Component id="lbReportName7" min="-2" max="-2" attributes="0"/>
@@ -1140,23 +1153,18 @@
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                                  <Component id="lbClientFechaInteres" min="-2" pref="114" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                                  <Component id="txtFieldClientCuotas" min="-2" pref="158" max="-2" attributes="0"/>
-                                                  <EmptySpace pref="46" max="32767" attributes="0"/>
-                                                  <Component id="lbClientInteresPago" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" attributes="0">
-                                                  <Component id="lbClientFechadeDeuda1" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                                                  <Component id="lbReportName8" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
+                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                          <Component id="lbClientFechaInteres" min="-2" pref="114" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                                          <Component id="txtFieldClientCuotas" min="-2" pref="158" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="lbClientInteresPago" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="lbClientFechadeDeuda1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                                          <Component id="lbReportName8" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
@@ -1186,11 +1194,9 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txtFieldClientCuotas" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          <Component id="lbClientFechaInteres" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="txtFieldClientCuotas" min="-2" pref="30" max="-2" attributes="0"/>
                                       <Component id="lbClientInteresPago" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbClientFechaInteres" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
@@ -1810,7 +1816,7 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="226" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1824,11 +1830,11 @@
                                       <Component id="btClientBuscar" min="-2" pref="27" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jPanel15" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                                  <Component id="jPanel15" max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jScrollPane2" min="-2" pref="230" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane2" min="-2" pref="205" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -1941,8 +1947,8 @@
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jScrollPane4" min="-2" pref="58" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                                      <Component id="jScrollPane4" pref="81" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
