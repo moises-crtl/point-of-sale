@@ -1800,18 +1800,22 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jPanel15" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane2" alignment="1" pref="685" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jPanel15" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane2" alignment="1" pref="685" max="32767" attributes="0"/>
+                                      </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="dateChooserCliente_Deuda1" min="-2" pref="232" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                                          <Component id="dateChooserCliente_Deuda2" min="-2" pref="232" max="-2" attributes="0"/>
+                                          <Component id="dateChooserCliente_Deuda1" min="-2" pref="201" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                          <Component id="dateChooserCliente_Deuda2" min="-2" pref="209" max="-2" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Component id="btClientBuscar" min="-2" pref="104" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                          <Component id="btClientTicketDeuda" min="-2" pref="104" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="15" max="32767" attributes="0"/>
+                                  <EmptySpace pref="10" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
@@ -1827,7 +1831,10 @@
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="dateChooserCliente_Deuda1" min="-2" max="-2" attributes="0"/>
                                       <Component id="dateChooserCliente_Deuda2" min="-2" max="-2" attributes="0"/>
-                                      <Component id="btClientBuscar" min="-2" pref="27" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="btClientBuscar" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                          <Component id="btClientTicketDeuda" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jPanel15" max="32767" attributes="0"/>
@@ -1988,6 +1995,24 @@
                             </Property>
                             <Property name="text" type="java.lang.String" value="Informacion del Cliente"/>
                           </Properties>
+                        </Component>
+                        <Component class="rsbuttom.RSButtonMetro" name="btClientTicketDeuda">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Ticket"/>
+                            <Property name="colorBorde" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
+                            <Property name="colorHover" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                            </Property>
+                            <Property name="colorNormal" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="66" green="66" red="66" type="rgb"/>
+                            </Property>
+                            <Property name="horizontalTextPosition" type="int" value="0"/>
+                          </Properties>
+                          <Events>
+                            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btClientTicketDeudaActionPerformed"/>
+                          </Events>
                         </Component>
                       </SubComponents>
                     </Container>

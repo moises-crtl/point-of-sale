@@ -197,6 +197,7 @@ public class Cliente extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         tablaPagosCuotas = new javax.swing.JTable();
         jLabel11 = new javax.swing.JLabel();
+        btClientTicketDeuda = new rsbuttom.RSButtonMetro();
         jPanel13 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         TBClientReportDeuda = new javax.swing.JTable();
@@ -1336,22 +1337,36 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     jLabel11.setForeground(new java.awt.Color(0, 102, 204));
     jLabel11.setText("Informacion del Cliente");
 
+    btClientTicketDeuda.setText("Ticket");
+    btClientTicketDeuda.setColorBorde(null);
+    btClientTicketDeuda.setColorHover(new java.awt.Color(204, 204, 204));
+    btClientTicketDeuda.setColorNormal(new java.awt.Color(102, 102, 102));
+    btClientTicketDeuda.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    btClientTicketDeuda.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            btClientTicketDeudaActionPerformed(evt);
+        }
+    });
+
     javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
     jPanel9.setLayout(jPanel9Layout);
     jPanel9Layout.setHorizontalGroup(
         jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(jPanel9Layout.createSequentialGroup()
             .addContainerGap()
-            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)
-                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel9Layout.createSequentialGroup()
-                    .addComponent(dateChooserCliente_Deuda1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(47, 47, 47)
-                    .addComponent(dateChooserCliente_Deuda2, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE))
+                .addGroup(jPanel9Layout.createSequentialGroup()
+                    .addComponent(dateChooserCliente_Deuda1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(38, 38, 38)
+                    .addComponent(dateChooserCliente_Deuda2, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(18, 18, 18)
-                    .addComponent(btClientBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addContainerGap(15, Short.MAX_VALUE))
+                    .addComponent(btClientBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(16, 16, 16)
+                    .addComponent(btClientTicketDeuda, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addContainerGap(10, Short.MAX_VALUE))
         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel11)
@@ -1364,7 +1379,9 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
             .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                 .addComponent(dateChooserCliente_Deuda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(dateChooserCliente_Deuda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(btClientBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btClientBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btClientTicketDeuda, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGap(18, 18, 18)
             .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGap(18, 18, 18)
@@ -1901,6 +1918,10 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
         }
     }//GEN-LAST:event_TBClientsReportMouseClicked
 
+    private void btClientTicketDeudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btClientTicketDeudaActionPerformed
+        clientViewModel.TicketDeuda();
+    }//GEN-LAST:event_btClientTicketDeudaActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox CheckBoxClienteExtenderDias;
@@ -1918,6 +1939,7 @@ public void actionPerformed(java.awt.event.ActionEvent evt) {
     private rsbuttom.RSButtonMetro btClientPage2;
     private rsbuttom.RSButtonMetro btClientPage3;
     private rsbuttom.RSButtonMetro btClientPage4;
+    private rsbuttom.RSButtonMetro btClientTicketDeuda;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox cbCredito;
     private datechooser.beans.DateChooserCombo dateChooserCliente_Deuda1;
